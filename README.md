@@ -1,15 +1,15 @@
 # Girl’s Night
 
-Private game club. Production: https://girls-night-luchiiro.resolutechar2.chatgpt.site
+Private game club: https://girls-night-luchiiro.resolutechar2.chatgpt.site
 
-The site uses server-side HTTP Basic authentication over HTTPS. Browsers ask for a shared username and password. GitHub and ChatGPT accounts are not required for visitors. Keep the repository private and GitHub Pages disabled.
+Visitors enter a shared password in a form. No username, GitHub or ChatGPT account is needed. Password verification happens on the server before game HTML is served. Keep the repository private and GitHub Pages disabled.
 
-`SITE_USERNAME` and `SITE_PASSWORD` are production secrets managed in Sites. No real credentials belong in this repository. Passwords must contain at least 20 characters; use a randomly generated password. To revoke a shared password, update the production secret and redeploy. Browsers may remember credentials until their session ends; use a private browser window on shared devices.
+Production secrets are managed in Sites: `SITE_PASSWORD` and a random `SESSION_SECRET` (at least 32 characters). Never put real values in source or client code. To change the password, update `SITE_PASSWORD` in Sites and redeploy. Existing sessions are automatically invalidated by password or signing-key changes.
 
-All routes require authentication. HTML is bundled into the Worker; there is no public static asset directory. Missing secrets fail closed. Responses disable caching and search indexing.
+Successful login sets a signed, seven-day `__Host-gn-session` cookie with Secure, HttpOnly and SameSite=Strict attributes. Login/logout require same-origin POST requests. Logout clears the current browser cookie. There is a best-effort per-IP attempt limit in each Worker instance; it is not a global distributed rate limit. Responses disable caching and search indexing. Missing secrets fail closed.
 
-Build with `node scripts/build.mjs`, then check with `node --test scripts/auth.test.mjs`. Deploy only the Worker build from `dist/` via Sites. Never deploy `index.html` directly to a static host: static hosting bypasses the server password protection.
+Build: `node scripts/build.mjs`. Tests: `node --test scripts/auth.test.mjs`.
 
-The GitHub repository stores source. Sites hosts a separately synchronized source repository; GitHub pushes do not automatically redeploy this site.
+Deploy only the Worker build in `dist/` through Sites. There is no public static directory: `index.html` is bundled into server code. Do not deploy HTML directly to a static host, because that bypasses password protection.
 
-Games currently run on one device. Online multiplayer is not implemented.
+GitHub stores source. Sites hosts a separately synchronized source repository; GitHub pushes do not automatically redeploy this site. Games currently run on one device; online multiplayer is not implemented.
