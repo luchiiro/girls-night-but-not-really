@@ -3,5 +3,10 @@
   "main": "dist/server/index.js",
   "compatibility_date": "2026-11-01",
   "workers_dev": true,
-  "preview_urls": false
+  "preview_urls": false,
+  "durable_objects": {
+    "bindings": [{"name": "GAME_ROOMS", "class_name": "GameRoom"}]
+  },
+  "migrations": [{"tag": "v1-game-rooms", "new_sqlite_classes": ["GameRoom"]}]
 }
+

@@ -116,6 +116,16 @@ h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.
 @media(max-width:720px){.top{height:65px}.brand{font-size:16px}.brand small{font-size:8px;letter-spacing:1px}.hero{padding:29px 21px 17px;min-height:0}.hero h1{font-size:clamp(38px,10vw,58px)}.art{max-width:340px}.strip{justify-content:flex-start;margin-bottom:25px}.strip span{font-size:10px;padding:5px 8px}.section-head h2{font-size:26px}.cover{height:110px}.card h3{font-size:17px}.cardfoot{flex-wrap:wrap}.card{padding:7px}.game{padding:15px}.pill{display:none}}
 @media(max-width:340px){.grid{grid-template-columns:1fr}}
 
+
+.invite{margin:25px 0;padding:19px;border:1px solid var(--gold);border-radius:10px;background:var(--surface)}
+.invite label,.room-panel label{display:block;font-size:13px;font-weight:700;margin:0 0 8px}
+.invite-row{display:flex;gap:9px;align-items:center}.invite-row input{min-width:0;flex:1;width:100%;font:inherit;font-size:13px;padding:11px 12px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}
+.mode-panel{text-align:center;padding:20px 5px}.mode-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.hint{font-size:12px;color:var(--muted);margin:10px 0 0}
+.room-panel{max-width:520px;margin:18px auto;padding:17px;background:var(--soft);border:1px solid var(--line);border-radius:10px}#room-seat{display:block;color:var(--pink);font-weight:800;margin-bottom:12px}
+.error{color:var(--pink);font-size:14px;padding:12px;border:1px solid var(--line);background:var(--soft);border-radius:7px;max-width:650px;margin:15px auto}
+button:disabled{opacity:.6}.cell:disabled{opacity:1}.board[aria-busy=true]{opacity:.65}
+@media(max-width:500px){.invite-row{flex-direction:column;align-items:stretch}.mode-actions>*{width:100%}}
+
 </style>
 </head>
 <body>
@@ -128,7 +138,7 @@ h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.
 <symbol id="ico-cards" viewBox="0 0 128 110"><rect x="29" y="18" width="49" height="73" rx="10" fill="#a58bc9" stroke="#765c9a" stroke-width="2" transform="rotate(-20 53 55)"/><rect x="51" y="18" width="49" height="73" rx="10" fill="#fff9ff" stroke="#b99ad6" stroke-width="2" transform="rotate(13 75 55)"/><path d="M74 66C40 40 69 31 77 48C94 34 110 57 74 66Z" fill="#e68bb6"/></symbol>
 <symbol id="ico-chat" viewBox="0 0 128 110"><path d="M12 27q0-10 12-10h59q12 0 12 12v30q0 12-12 12H46L24 86V71q-12 0-12-12Z" fill="#fffaf7" stroke="#8bb5a0" stroke-width="3"/><path d="M47 47q0-10 10-10h49q10 0 10 10v30q0 10-10 10h-4v13L84 87H57q-10 0-10-10Z" fill="#a6d3bb" stroke="#72a98d" stroke-width="3"/><g fill="#fff"><circle cx="66" cy="62" r="4"/><circle cx="82" cy="62" r="4"/><circle cx="98" cy="62" r="4"/></g></symbol>
 </defs></svg>
-<header><div class="wrap top"><a class="brand" href="#" id="home-link"><span class="logo">♡</span><span>Girl’s Night<small>but not really</small></span></a><nav class="nav" aria-label="Навигация"><form action="/logout" method="post"><button class="subtle" type="submit">Выйти</button></form><a href="#games" class="navlink" id="games-link">Игры</a><span class="pill">✦ Альфа 0.2</span><button class="theme" id="theme" aria-label="Переключить тему" title="Переключить тему">☾</button></nav></div></header>
+<header><div class="wrap top"><a class="brand" href="#" id="home-link"><span class="logo">♡</span><span>Girl’s Night<small>but not really</small></span></a><nav class="nav" aria-label="Навигация"><form action="/logout" method="post"><button class="subtle" type="submit">Выйти</button></form><a href="#games" class="navlink" id="games-link">Игры</a><span class="pill">✦ Альфа 0.3 · онлайн</span><button class="theme" id="theme" aria-label="Переключить тему" title="Переключить тему">☾</button></nav></div></header>
 <main class="wrap">
 <div id="lobby">
 <section class="hero">
@@ -175,8 +185,8 @@ h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.
 <g fill="var(--gold)"><path d="M48 89l4 11 11 4-11 4-4 11-4-11-11-4 11-4ZM413 107l3 9 9 3-9 3-3 9-3-9-9-3 9-3ZM132 256l3 8 8 3-8 3-3 8-3-8-8-3 8-3Z"/><circle cx="432" cy="195" r="3"/><circle cx="35" cy="215" r="3"/></g>
 </svg>
 </section>
-<div class="strip"><span>♡ закрытый клуб</span><span>✦ 3 игры доступны</span><span>♢ уютно и без спешки</span></div>
-<section id="games"><div class="section-head"><div><span class="eyebrow">01 / ИГРОВОЙ САЛОН</span><h2>Во что играем?</h2></div><p>Пока на одном устройстве</p></div>
+<div class="strip"><span>♡ закрытый клуб</span><span>✦ 3 игры онлайн</span><span>♢ уютно и без спешки</span></div>
+<section id="games"><div class="section-head"><div><span class="eyebrow">01 / ИГРОВОЙ САЛОН</span><h2>Во что играем?</h2></div><p>Вместе, даже на расстоянии</p></div>
 <div class="grid">
 <article class="card"><div class="cover pink"><svg aria-hidden="true"><use href="#ico-check"/></svg></div><div class="cardbody"><h3>Шашки</h3><p>Хитрые ходы и сладкая месть.</p><div class="cardfoot"><span class="tag">♙ 2 игрока</span><button class="play" data-game="checkers">Играть ↗</button></div></div></article>
 <article class="card"><div class="cover purple"><svg aria-hidden="true"><use href="#ico-tic"/></svg></div><div class="cardbody"><h3>Крестики-нолики</h3><p>Маленькая битва за три в ряд.</p><div class="cardfoot"><span class="tag">♙ 2 игрока</span><button class="play" data-game="tic">Играть ↗</button></div></div></article>
@@ -185,35 +195,21 @@ h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.
 <article class="card soon"><div class="cover lilac"><svg aria-hidden="true"><use href="#ico-cards"/></svg></div><div class="cardbody"><h3>Карточные игры</h3><p>Туз в рукаве? Кто бы мог подумать.</p><div class="cardfoot"><span class="tag">♙ 2+ игрока</span><button class="play" disabled>Скоро ♡</button></div></div></article>
 <article class="card soon"><div class="cover mint"><svg aria-hidden="true"><use href="#ico-chat"/></svg></div><div class="cardbody"><h3>Правда или действие</h3><p>Для самых смелых признаний.</p><div class="cardfoot"><span class="tag">♙ 2+ игрока</span><button class="play" disabled>Скоро ♡</button></div></div></article>
 </div></section>
-<div class="note"><div class="note-icon">✉</div><div><strong>Secret clubhouse — только для своих</strong><p>Вход защищён общим паролем. Игры пока доступны на одном устройстве; онлайн-комнаты появятся позже.</p></div></div>
+<form id="join-form" class="invite"><label for="join-link">Уже есть приглашение?</label><div class="invite-row"><input id="join-link" type="text" placeholder="Вставь ссылку на комнату" required autocomplete="off"><button class="subtle" type="submit">Присоединиться ↗</button></div></form>
+<p id="lobby-error" class="error" role="alert" hidden></p>
+<div class="note"><div class="note-icon">✉</div><div><strong>Secret clubhouse — только для своих</strong><p>Создай комнату и отправь подруге ссылку. Вход по общему паролю, игра — с любых двух устройств. Комната хранится 24 часа.</p></div></div>
 </div>
-<section id="game" class="game" hidden><div class="gamebar"><button class="subtle" id="back">← Все игры</button><button class="subtle" id="restart">↻ Сначала</button></div><h2 id="game-title"></h2><p class="rules" id="rules"></p><div class="status" id="status" role="status" aria-live="polite"></div><div class="board" id="board"></div></section>
+<section id="game" class="game" hidden>
+<div class="gamebar"><button class="subtle" id="back">← Все игры</button><button class="subtle" id="restart" hidden>↻ Сначала</button></div>
+<h2 id="game-title"></h2><p class="rules" id="rules"></p>
+<div id="mode-panel" class="mode-panel"><p>Как играем сегодня?</p><div class="mode-actions"><button class="primary" id="create-room">Создать онлайн-комнату ↗</button><button class="subtle" id="local-play">На одном устройстве</button></div><p class="hint">Для онлайн-игры отправь подруге ссылку. Аккаунт ей не нужен.</p></div>
+<div id="room-panel" class="room-panel" hidden><span id="room-seat"></span><label for="invite-link">Приглашение для подруги</label><div class="invite-row"><input id="invite-link" readonly aria-label="Ссылка-приглашение"><button id="copy-link" class="subtle">Скопировать</button></div><p id="room-presence" class="hint" aria-live="polite"></p><p class="hint">Обновление страницы сохранит место в партии. Комната действует 24 часа.</p></div>
+<p id="game-error" class="error" role="alert" hidden></p><a id="sign-in" class="subtle" hidden>Войти снова</a><button id="reconnect" class="subtle" hidden>Переподключиться</button>
+<div class="status" id="status" role="status" aria-live="polite" hidden></div><div class="board" id="board" hidden></div>
+</section>
 </main>
 <footer><div class="wrap">Made for girls &amp; their chaos ♡ · private game club</div></footer>
-<script>
-'use strict';
-const $=id=>document.getElementById(id);
-const theme=$('theme');
-function themeLabel(){const dark=document.documentElement.dataset.theme==='dark';theme.textContent=dark?'☀':'☾';theme.setAttribute('aria-label',dark?'Светлая тема':'Тёмная тема');document.querySelector('meta[name=theme-color]').content=dark?'#160e17':'#f9e6e5'}
-themeLabel();
-theme.onclick=()=>{const mode=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=mode;try{localStorage.setItem('gn-theme',mode)}catch(e){}themeLabel()};
-let kind='',state=[],turn=1,done=false,selected=-1,forced=false,winning=[];
-const titles={tic:'Крестики-нолики',connect:'Четыре в ряд',checkers:'Шашки'};
-const instructions={tic:'По очереди ставьте ♡ и ×. Три одинаковых знака по горизонтали, вертикали или диагонали — победа.',connect:'Нажмите на любой кружок в нужном столбце. Фишка упадёт вниз. Соберите четыре своих фишки в ряд.',checkers:'Упрощённые английские шашки: ход по диагонали вперёд, обязательное взятие, серия прыжков. Дамки ходят на одну клетку в обе стороны. После превращения ход заканчивается.'};
-function player(p){return p===1?'♡ Роза':kind==='tic'?'× Полночь':'✦ Полночь'}
-function message(s){$('status').textContent=s||'Ход: '+player(turn)}
-function start(k){kind=k;turn=1;done=false;selected=-1;forced=false;winning=[];state=Array(k==='tic'?9:k==='connect'?42:64).fill(0);if(k==='checkers'){for(let i=0;i<64;i++){let r=Math.floor(i/8),c=i%8;if((r+c)%2===1)state[i]=r<3?2:r>4?1:0}}$('lobby').hidden=true;$('game').hidden=false;$('game-title').textContent=titles[k];$('rules').textContent=instructions[k];message();render();window.scrollTo(0,0)}
-function home(){kind='';$('game').hidden=true;$('lobby').hidden=false;window.scrollTo(0,0)}
-document.querySelectorAll('[data-game]').forEach(b=>b.onclick=()=>start(b.dataset.game));$('back').onclick=home;$('restart').onclick=()=>start(kind);$('home-link').onclick=e=>{e.preventDefault();home()};$('games-link').onclick=()=>{if(kind)home()};
-function owner(v){return v===3?1:v===4?2:v}
-function jumps(i,captureOnly=false){let v=state[i];if(!v)return [];let r=Math.floor(i/8),c=i%8;let dirs=v>2?[-1,1]:v===1?[-1]:[1];let result=[];for(let dr of dirs)for(let dc of [-1,1]){let rr=r+dr,cc=c+dc;if(rr<0||rr>7||cc<0||cc>7)continue;let next=rr*8+cc;if(!state[next]&&!captureOnly)result.push({to:next,take:-1});else if(state[next]&&owner(state[next])!==owner(v)){let r2=rr+dr,c2=cc+dc;if(r2>=0&&r2<8&&c2>=0&&c2<8&&!state[r2*8+c2])result.push({to:r2*8+c2,take:next})}}return result}
-function mustTake(){return state.some((v,i)=>owner(v)===turn&&jumps(i,true).length)}
-function legal(i){return owner(state[i])===turn?jumps(i,forced||mustTake()):[]}
-function finish(p){done=true;message(p?'Победа: '+player(p)+'! ✧':'Ничья! ♡')}
-function checkMove(i){if(done)return;if(owner(state[i])===turn&&!forced){if(legal(i).length)selected=i;else message(mustTake()?'Нужно выбрать шашку, которая может взять соперницу.':'У этой шашки нет доступного хода.');render();return}if(selected<0)return;let move=legal(selected).find(m=>m.to===i);if(!move)return;let v=state[selected];state[selected]=0;state[i]=v;if(move.take>=0)state[move.take]=0;let crown=(v===1&&i<8)||(v===2&&i>=56);if(crown)state[i]=v+2;if(move.take>=0&&!crown&&jumps(i,true).length){selected=i;forced=true;message('Продолжи взятие той же шашкой ✦');render();return}selected=-1;forced=false;turn=3-turn;if(!state.some((x,j)=>owner(x)===turn&&jumps(j).length))finish(3-turn);else message();render()}
-function lineWin(i,w,h,n){let r=Math.floor(i/w),c=i%w,v=state[i];for(let [dr,dc] of [[0,1],[1,0],[1,1],[1,-1]]){let cells=[i];for(let s of [-1,1])for(let k=1;k<n;k++){let rr=r+dr*k*s,cc=c+dc*k*s;if(rr<0||rr>=h||cc<0||cc>=w||state[rr*w+cc]!==v)break;cells.push(rr*w+cc)}if(cells.length>=n)return cells}return []}
-function simpleMove(i){if(done)return;if(kind==='connect'){let c=i%7;let row=5;while(row>=0&&state[row*7+c])row--;if(row<0)return;i=row*7+c}else if(state[i])return;state[i]=turn;winning=lineWin(i,kind==='tic'?3:7,kind==='tic'?3:6,kind==='tic'?3:4);if(winning.length)finish(turn);else if(state.every(Boolean))finish(0);else{turn=3-turn;message()}render()}
-function render(){const board=$('board');board.className='board '+kind;let cols=kind==='tic'?3:kind==='connect'?7:8;board.style.gridTemplateColumns='repeat('+cols+',minmax(0,1fr))';board.replaceChildren();let targets=kind==='checkers'&&selected>=0?legal(selected).map(m=>m.to):[];state.forEach((v,i)=>{let b=document.createElement('button');b.className='cell';b.type='button';let r=Math.floor(i/cols),c=i%cols;b.setAttribute('aria-label','Ряд '+(r+1)+', столбец '+(c+1)+(v?', '+player(owner(v)):''));if(winning.includes(i))b.classList.add('win');if(kind==='checkers'){if((r+c)%2)b.classList.add('dark');else b.disabled=true;if(i===selected)b.classList.add('selected');if(targets.includes(i))b.classList.add('target');if(v){let p=document.createElement('span');p.className='piece p'+owner(v);p.textContent=v>2?'♛':v===1?'♡':'✦';b.append(p)}b.onclick=()=>checkMove(i)}else{if(kind==='tic'&&v){b.textContent=v===1?'♡':'×';b.classList.add(v===1?'x':'o');b.disabled=true}if(kind==='connect'&&v)b.classList.add('p'+v);b.onclick=()=>simpleMove(i)}if(done)b.disabled=true;board.append(b)})}
-</script>
+<script type="module" src="/client.js"></script>
 </body>
 </html>
+
