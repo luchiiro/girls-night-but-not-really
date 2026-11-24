@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#fff3f7">
+<title>Girl’s Night But Not Really ♡</title>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('gn-theme')||'light'}catch(e){}</script>
+<style>
+*{box-sizing:border-box}
+:root{color-scheme:light;--bg:#fff5f7;--surface:#fff;--soft:#fbe7ef;--ink:#403248;--muted:#806d83;--line:#efdae7;--pink:#b83d71;--accent:#ed8caf;--purple:#e6dcfb;--blue:#dff3ff;--hero:#ffe5ef;--shadow:0 12px 38px #a7467310;--board-light:#f8e8f0;--board-dark:#c896bd;--focus:#a93877}
+[data-theme=dark]{color-scheme:dark;--bg:#171320;--surface:#241e30;--soft:#34263e;--ink:#fff0fa;--muted:#c6b2ce;--line:#45364e;--pink:#ff9bc6;--accent:#f19ac4;--purple:#423354;--blue:#263d51;--hero:#30243d;--shadow:0 12px 38px #0003;--board-light:#a58da7;--board-dark:#584260;--focus:#ffd0e5}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 85% 0%,var(--soft),transparent 48%),var(--bg);color:var(--ink);font-family:ui-rounded,'Nunito','Segoe UI',system-ui,sans-serif;line-height:1.5;min-height:100vh}
+button,a,input{-webkit-tap-highlight-color:transparent}
+button{font:inherit;cursor:pointer;color:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+button:disabled{cursor:default}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1130px;margin:auto;padding:0 24px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.top{height:76px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;gap:11px;align-items:center;font-size:14px;font-weight:850;letter-spacing:-.3px}
+.logo{width:42px;height:42px;border-radius:15px;background:#f6b6cf;display:grid;place-items:center;font-size:25px;color:#733b60;box-shadow:inset 0 -3px #d97fa52a}
+.brand small{display:block;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:8px}
+.pill,.theme,.subtle{border:1px solid var(--line);background:var(--surface);border-radius:100px;padding:9px 15px;font-size:13px;font-weight:750}
+.theme{min-width:42px;padding:9px 12px}
+.navlink{font-size:13px;color:var(--muted);font-weight:700;margin-right:9px}
+main{padding-top:30px!important;padding-bottom:44px!important}
+.hero{position:relative;isolation:isolate;overflow:hidden;border:1px solid var(--line);border-radius:34px;background:linear-gradient(120deg,var(--hero),var(--purple));padding:46px 40px;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;min-height:330px;box-shadow:var(--shadow)}
+.hero:after{content:"♡";position:absolute;right:-16px;top:-98px;font-size:390px;font-weight:200;opacity:.09;line-height:1;z-index:-1;transform:rotate(-18deg)}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:850;letter-spacing:1.4px;text-transform:uppercase;color:var(--pink)}
+.dot{width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 4px var(--soft)}
+h1{font-size:clamp(36px,5.4vw,66px);line-height:.98;letter-spacing:-.065em;margin:16px 0 20px;font-weight:900}
+h1 em{display:block;color:var(--pink);font-style:normal;font-weight:850}
+.hero p{max-width:420px;color:var(--muted);font-size:15px;margin:0 0 23px}
+.primary{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;background:var(--pink);color:var(--surface);font-size:14px;font-weight:850;padding:13px 21px;border-radius:16px;box-shadow:0 5px 0 #6b295726;transition:transform .15s}
+.primary:hover{transform:translateY(-2px)}
+.art{width:100%;min-width:0;overflow:visible;filter:drop-shadow(0 10px 9px #6d38651a)}
+.art .float{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.art .float:nth-of-type(2){animation-delay:-1.3s}.art .float:nth-of-type(3){animation-delay:-2.6s}
+@keyframes bob{50%{transform:translateY(-7px)}}
+.strip{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 36px}
+.strip span{background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:7px 13px;color:var(--muted);font-size:12px;font-weight:700}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:18px}
+.section-head h2{font-size:28px;letter-spacing:-1px;margin:4px 0 0}
+.section-head p{font-size:13px;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:13px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .2s}
+.card:not(.soon):hover{transform:translateY(-4px)}
+.cover{height:132px;border-radius:17px;position:relative;overflow:hidden;display:grid;place-items:center}
+.cover.pink{background:#f9d3e3}.cover.purple{background:#e3d5fa}.cover.blue{background:#d9f0ff}.cover.peach{background:#fce5d6}.cover.lilac{background:#eee0f4}.cover.mint{background:#dcefe4}
+[data-theme=dark] .cover{filter:saturate(.78) brightness(.83)}
+.cover:before,.cover:after{content:"✧";font-size:35px;color:#fff;position:absolute;left:14px;top:4px}.cover:after{content:"♡";left:auto;top:auto;right:13px;bottom:2px}
+.cover svg{width:128px;height:110px;filter:drop-shadow(0 5px 0 #634b7130)}
+.cardbody{padding:13px 6px 4px;flex:1;display:flex;flex-direction:column}
+.card h3{font-size:18px;letter-spacing:-.5px;margin:0 0 3px}
+.card p{font-size:13px;color:var(--muted);margin:0 0 14px}
+.cardfoot{display:flex;gap:8px;justify-content:space-between;align-items:center;margin-top:auto}
+.tag{color:var(--muted);font-size:11px;font-weight:750;white-space:nowrap}
+.play{border:0;background:var(--soft);color:var(--pink);border-radius:12px;padding:8px 14px;font-size:13px;font-weight:850}
+.soon .play{color:var(--muted);opacity:.7}
+.note{margin-top:28px;padding:21px 23px;border-radius:23px;background:var(--surface);border:1px dashed var(--line);display:flex;gap:16px;align-items:center}
+.note-icon{font-size:30px}
+.note strong{font-size:15px}.note p{margin:3px 0 0;color:var(--muted);font-size:13px}
+footer{border-top:1px solid var(--line);padding:21px 0;color:var(--muted);font-size:11px;text-align:center}
+[hidden]{display:none!important}
+.game{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:var(--shadow)}
+.gamebar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.game h2{font-size:28px;margin:15px 0 2px;letter-spacing:-1px;text-align:center}
+.rules{font-size:13px;color:var(--muted);text-align:center;max-width:650px;margin:0 auto 18px}
+.status{text-align:center;font-weight:850;background:var(--soft);padding:10px;border-radius:13px;margin:0 auto 18px;max-width:500px;color:var(--pink)}
+.board{display:grid;margin:auto;gap:5px;width:min(100%,410px);touch-action:manipulation}
+.cell{aspect-ratio:1;min-width:0;display:grid;place-items:center;position:relative;border:0;border-radius:12px;background:var(--soft);font-size:clamp(24px,8vw,48px);padding:0;font-weight:900}
+.cell.x{color:var(--pink)}.cell.o{color:#6b91c5}
+.board.checkers{gap:0;border:5px solid var(--line);border-radius:13px;overflow:hidden;width:min(100%,460px)}
+.checkers .cell{border-radius:0;background:var(--board-light)}
+.checkers .cell.dark{background:var(--board-dark)}
+.checkers .cell.selected{box-shadow:inset 0 0 0 4px #ffdf77;z-index:1}
+.checkers .cell.target:after{content:"";width:25%;height:25%;border-radius:50%;background:#fff9;position:absolute}
+.piece{width:76%;height:76%;border-radius:50%;display:grid;place-items:center;font-size:clamp(12px,4vw,24px);box-shadow:inset 0 -4px #0002,0 2px 2px #0003;border:2px solid #fff8;line-height:1}
+.piece.p1{background:#ffe8ef;color:#b94274}.piece.p2{background:#544268;color:#ffe2fb}
+.board.connect{gap:4px;background:var(--purple);border-radius:15px;padding:8px;width:min(100%,460px)}
+.connect .cell{border-radius:50%;background:var(--surface);box-shadow:inset 0 2px 5px #0002}
+.connect .cell.p1{background:#ee89ae}.connect .cell.p2{background:#87c3ef}
+.win{outline:3px solid var(--pink);outline-offset:-3px}
+@media(max-width:720px){.wrap{padding:0 15px}.top{height:65px}.brand{font-size:12px}.brand small{font-size:9px}.logo{width:36px;height:36px}.navlink{display:none}.pill{font-size:11px;padding:8px 10px}main{padding-top:18px!important}.hero{grid-template-columns:1fr;padding:27px 23px 13px;border-radius:27px}.hero p{font-size:14px}.art{max-width:390px;margin:8px auto 0;display:block}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{padding:9px;border-radius:18px}.cover{height:108px;border-radius:13px}.cover svg{width:104px;height:90px}.cardbody{padding:10px 3px 3px}.card h3{font-size:15px}.card p{font-size:12px}.cardfoot{gap:4px}.tag{font-size:10px}.play{font-size:12px;padding:7px 9px}.section-head h2{font-size:23px}.section-head p{font-size:11px}.strip{margin-bottom:24px}.game{padding:15px}.note{padding:15px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<!-- Original simplified vector fan art, not official Sanrio assets. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+<defs>
+<symbol id="kitty" viewBox="0 0 180 180">
+<g stroke="#594457" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="89" cy="154" rx="49" ry="12" fill="#bc80a0" opacity=".18" stroke="none"/>
+<path d="M65 114 Q53 120 48 146 Q66 155 85 148 L91 139 L99 149 Q119 155 135 145 Q127 120 113 114Z" fill="#f4a9c9"/>
+<ellipse cx="68" cy="147" rx="15" ry="9" fill="#fffafc"/><ellipse cx="112" cy="147" rx="15" ry="9" fill="#fffafc"/>
+<path d="M35 74 Q24 46 34 28 Q48 25 69 43 Q91 37 114 43 Q137 25 147 30 Q157 45 146 73 Q163 91 153 111 Q142 134 91 134 Q40 134 26 111 Q18 94 35 74Z" fill="#fffdfd"/>
+<path d="M119 44 Q99 26 102 49 Q102 62 122 53 Q140 69 151 56 Q158 45 151 33 Q137 28 127 45Z" fill="#ee668d"/><circle cx="126" cy="49" r="8" fill="#ff97b2"/>
+<g stroke-width="3"><path d="M24 85 L10 80 M25 97 L8 98 M28 107 L15 114 M153 85 L167 80 M154 97 L171 98 M151 107 L164 114" fill="none"/></g>
+<ellipse cx="64" cy="93" rx="4.6" ry="7" fill="#594457" stroke="none"/><ellipse cx="116" cy="93" rx="4.6" ry="7" fill="#594457" stroke="none"/><ellipse cx="90" cy="105" rx="7" ry="4.5" fill="#f9d879" stroke-width="1.7"/>
+<ellipse cx="48" cy="106" rx="8" ry="4" fill="#f8c4d7" stroke="none"/><ellipse cx="132" cy="106" rx="8" ry="4" fill="#f8c4d7" stroke="none"/>
+</g></symbol>
+<symbol id="kuromi" viewBox="0 0 180 180">
+<g stroke="#594457" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round">
+<ellipse cx="91" cy="155" rx="49" ry="11" fill="#bc80a0" opacity=".18" stroke="none"/>
+<path d="M65 116 Q48 133 56 148 L87 151 L92 140 L100 151 L128 148 Q133 130 115 116Z" fill="#66516f"/>
+<ellipse cx="70" cy="149" rx="14" ry="8" fill="#fffafd"/><ellipse cx="113" cy="149" rx="14" ry="8" fill="#fffafd"/>
+<path d="M34 78 Q24 42 19 19 Q48 24 73 52 Q90 44 108 52 Q137 24 161 18 Q158 49 147 78 Q166 103 149 123 Q132 140 90 140 Q46 140 30 123 Q13 102 34 78Z" fill="#574460"/>
+<circle cx="19" cy="19" r="8" fill="#f4a7c7"/><circle cx="161" cy="18" r="8" fill="#f4a7c7"/>
+<path d="M40 103 Q44 79 68 79 Q82 79 90 90 Q100 78 117 79 Q140 80 143 103 Q148 130 91 132 Q35 130 40 103Z" fill="#fffafd"/>
+<path d="M76 65 Q76 53 90 53 Q104 53 104 65 Q104 72 98 73 L98 78 L82 78 L82 73 Q76 72 76 65Z" fill="#f89cc3" stroke="none"/>
+<g fill="#574460" stroke="none"><circle cx="85" cy="65" r="3"/><circle cx="95" cy="65" r="3"/><ellipse cx="65" cy="105" rx="5" ry="7"/><ellipse cx="116" cy="105" rx="5" ry="7"/><ellipse cx="90" cy="111" rx="4" ry="3"/></g>
+<path d="M85 119 Q90 124 95 119" fill="none" stroke-width="2"/>
+<ellipse cx="52" cy="118" rx="7" ry="4" fill="#f8c4d7" stroke="none"/><ellipse cx="129" cy="118" rx="7" ry="4" fill="#f8c4d7" stroke="none"/>
+</g></symbol>
+<symbol id="cinna" viewBox="0 0 200 180">
+<g stroke="#647991" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
+<ellipse cx="100" cy="156" rx="54" ry="10" fill="#8cabc3" opacity=".2" stroke="none"/>
+<path d="M121 129 Q151 115 150 136 Q147 151 126 145" fill="#fffdfd"/>
+<path d="M75 115 Q57 129 65 148 Q78 161 103 151 Q127 162 138 147 Q141 128 121 115Z" fill="#fffdfd"/>
+<path d="M56 64 Q21 58 7 93 Q-1 122 18 124 Q40 127 61 103 M144 64 Q180 58 193 93 Q201 122 182 124 Q160 127 139 103" fill="#fffdfd"/>
+<path d="M46 77 Q52 43 99 43 Q147 43 154 77 Q166 113 138 130 Q100 145 62 130 Q34 113 46 77Z" fill="#fffdfd"/>
+<ellipse cx="74" cy="103" rx="5.5" ry="7" fill="#719bc0" stroke="none"/><ellipse cx="126" cy="103" rx="5.5" ry="7" fill="#719bc0" stroke="none"/>
+<path d="M91 113 Q96 120 100 113 Q105 120 110 113" fill="none" stroke="#719bc0" stroke-width="2.8"/>
+<ellipse cx="60" cy="115" rx="10" ry="5" fill="#f8bfd5" stroke="none"/><ellipse cx="140" cy="115" rx="10" ry="5" fill="#f8bfd5" stroke="none"/>
+<path d="M89 135 Q72 123 74 141 Q76 151 93 143 L105 143 Q122 151 125 141 Q127 123 111 135Z" fill="#a8d8f6" stroke-width="2"/><circle cx="100" cy="139" r="6" fill="#ceeaff" stroke-width="2"/>
+</g></symbol>
+<symbol id="ico-check" viewBox="0 0 128 110"><g transform="rotate(-10 64 55)"><rect x="22" y="12" width="84" height="84" rx="9" fill="#fff5f9" stroke="#a7658e" stroke-width="3"/><g fill="#ca91b8"><path d="M25 15h19v19H25zm40 0h20v19H65zM45 35h20v20H45zm40 0h18v20H85zM25 55h20v20H25zm40 0h20v20H65zM45 75h20v18H45zm40 0h18v18H85z"/></g><g stroke="#fff8" stroke-width="2"><circle cx="35" cy="25" r="8" fill="#654674"/><circle cx="55" cy="45" r="8" fill="#654674"/><circle cx="75" cy="65" r="8" fill="#ee8fb0"/><circle cx="95" cy="85" r="8" fill="#ee8fb0"/></g></g></symbol>
+<symbol id="ico-tic" viewBox="0 0 128 110"><rect x="23" y="12" width="82" height="86" rx="19" fill="#fff8ff" transform="rotate(8 64 55)"/><g stroke="#baa1db" stroke-width="3.5" stroke-linecap="round"><path d="M51 23v65m26-65v65M32 42h65M32 68h65"/></g><g stroke="#d16f9f" stroke-width="5" stroke-linecap="round"><path d="M36 27l10 10m0-10L36 37M59 50l11 11m0-11L59 61M83 76l11 10m0-10L83 86"/></g><g fill="none" stroke="#8ca8de" stroke-width="4"><circle cx="89" cy="32" r="7"/><circle cx="41" cy="79" r="7"/></g></symbol>
+<symbol id="ico-four" viewBox="0 0 128 110"><rect x="16" y="17" width="96" height="76" rx="13" fill="#80a9d4" stroke="#6485b1" stroke-width="2"/><g fill="#eaf6ff"><circle cx="31" cy="31" r="9"/><circle cx="53" cy="31" r="9"/><circle cx="75" cy="31" r="9"/><circle cx="97" cy="31" r="9"/><circle cx="31" cy="55" r="9"/><circle cx="97" cy="55" r="9"/></g><g fill="#ee9cba"><circle cx="53" cy="55" r="9"/><circle cx="31" cy="79" r="9"/><circle cx="75" cy="79" r="9"/></g><g fill="#ffe4a1"><circle cx="75" cy="55" r="9"/><circle cx="53" cy="79" r="9"/><circle cx="97" cy="79" r="9"/></g></symbol>
+<symbol id="ico-ship" viewBox="0 0 128 110"><path d="M19 64h91L94 84H35Z" fill="#cf8a9e" stroke="#865c7b" stroke-width="3" stroke-linejoin="round"/><path d="M62 17v45H31Z" fill="#fff8f4" stroke="#865c7b" stroke-width="2"/><path d="M68 27l30 35H68Z" fill="#e9b4b0" stroke="#865c7b" stroke-width="2"/><path d="M11 90q12-10 24 0t24 0t24 0t24 0" stroke="#9cb5cd" stroke-width="5" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="ico-cards" viewBox="0 0 128 110"><rect x="29" y="18" width="49" height="73" rx="10" fill="#a58bc9" stroke="#765c9a" stroke-width="2" transform="rotate(-20 53 55)"/><rect x="51" y="18" width="49" height="73" rx="10" fill="#fff9ff" stroke="#b99ad6" stroke-width="2" transform="rotate(13 75 55)"/><path d="M74 66C40 40 69 31 77 48C94 34 110 57 74 66Z" fill="#e68bb6"/></symbol>
+<symbol id="ico-chat" viewBox="0 0 128 110"><path d="M12 27q0-10 12-10h59q12 0 12 12v30q0 12-12 12H46L24 86V71q-12 0-12-12Z" fill="#fffaf7" stroke="#8bb5a0" stroke-width="3"/><path d="M47 47q0-10 10-10h49q10 0 10 10v30q0 10-10 10h-4v13L84 87H57q-10 0-10-10Z" fill="#a6d3bb" stroke="#72a98d" stroke-width="3"/><g fill="#fff"><circle cx="66" cy="62" r="4"/><circle cx="82" cy="62" r="4"/><circle cx="98" cy="62" r="4"/></g></symbol>
+</defs></svg>
+<header><div class="wrap top"><a class="brand" href="#" id="home-link"><span class="logo">♡</span><span>Girl’s Night<small>but not really</small></span></a><nav class="nav" aria-label="Навигация"><a href="#games" class="navlink" id="games-link">Игры</a><span class="pill">✦ Альфа 0.1</span><button class="theme" id="theme" aria-label="Переключить тему" title="Переключить тему">☾</button></nav></div></header>
+<main class="wrap">
+<div id="lobby">
+<section class="hero">
+<div><span class="eyebrow"><span class="dot"></span> your little game club</span><h1>Girl’s Night<em>but not really.</em></h1><p>Маленький уголок интернета для больших побед, милых соперниц и вечеров, которые случайно заканчиваются утром.</p><a href="#games" class="primary">Выбрать игру <span aria-hidden="true">↗</span></a></div>
+<svg class="art" viewBox="0 0 470 270" role="img" aria-label="Hello Kitty, Kuromi и Cinnamoroll">
+<ellipse cx="234" cy="233" rx="201" ry="22" fill="#a16caa" opacity=".11"/>
+<g fill="#fff" opacity=".9"><path d="M28 62l4 14 14 4-14 4-4 14-4-14-14-4 14-4zm373-28 4 11 11 4-11 4-4 11-4-11-11-4 11-4zM238 19l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/><circle cx="110" cy="37" r="4"/><circle cx="443" cy="132" r="4"/><circle cx="37" cy="175" r="3"/></g>
+<path d="M340 27c-16-18-34 4 0 24 34-20 16-42 0-24z" fill="#efa5c9" opacity=".75"/>
+<g class="float"><use href="#kitty" x="6" y="69" width="165" height="165"/></g>
+<g class="float"><use href="#kuromi" x="144" y="30" width="182" height="182"/></g>
+<g class="float"><use href="#cinna" x="292" y="80" width="174" height="157"/></g>
+<g font-size="10" font-weight="800" fill="#916585" text-anchor="middle"><text x="86" y="251">HELLO KITTY</text><text x="235" y="224">KUROMI</text><text x="381" y="251">CINNAMOROLL</text></g></svg>
+</section>
+<div class="strip"><span>♡ made for friends</span><span>✦ 3 игры доступны</span><span>☁ уютно и без спешки</span></div>
+<section id="games"><div class="section-head"><div><span class="eyebrow">01 / game shelf</span><h2>Во что играем?</h2></div><p>Пока на одном устройстве</p></div>
+<div class="grid">
+<article class="card"><div class="cover pink"><svg aria-hidden="true"><use href="#ico-check"/></svg></div><div class="cardbody"><h3>Шашки</h3><p>Хитрые ходы и сладкая месть.</p><div class="cardfoot"><span class="tag">♙ 2 игрока</span><button class="play" data-game="checkers">Играть ↗</button></div></div></article>
+<article class="card"><div class="cover purple"><svg aria-hidden="true"><use href="#ico-tic"/></svg></div><div class="cardbody"><h3>Крестики-нолики</h3><p>Маленькая битва за три в ряд.</p><div class="cardfoot"><span class="tag">♙ 2 игрока</span><button class="play" data-game="tic">Играть ↗</button></div></div></article>
+<article class="card"><div class="cover blue"><svg aria-hidden="true"><use href="#ico-four"/></svg></div><div class="cardbody"><h3>Четыре в ряд</h3><p>Собери цепочку раньше подруги.</p><div class="cardfoot"><span class="tag">♙ 2 игрока</span><button class="play" data-game="connect">Играть ↗</button></div></div></article>
+<article class="card soon"><div class="cover peach"><svg aria-hidden="true"><use href="#ico-ship"/></svg></div><div class="cardbody"><h3>Морской бой</h3><p>Розовые кораблики тоже тонут.</p><div class="cardfoot"><span class="tag">♙ 2 игрока</span><button class="play" disabled>Скоро ♡</button></div></div></article>
+<article class="card soon"><div class="cover lilac"><svg aria-hidden="true"><use href="#ico-cards"/></svg></div><div class="cardbody"><h3>Карточные игры</h3><p>Туз в рукаве? Кто бы мог подумать.</p><div class="cardfoot"><span class="tag">♙ 2+ игрока</span><button class="play" disabled>Скоро ♡</button></div></div></article>
+<article class="card soon"><div class="cover mint"><svg aria-hidden="true"><use href="#ico-chat"/></svg></div><div class="cardbody"><h3>Правда или действие</h3><p>Для самых смелых признаний.</p><div class="cardfoot"><span class="tag">♙ 2+ игрока</span><button class="play" disabled>Скоро ♡</button></div></div></article>
+</div></section>
+<div class="note"><div class="note-icon">✉</div><div><strong>Secret clubhouse — в планах</strong><p>Онлайн-комнаты, приглашения, профили и защищённый вход появятся после подключения сервера. Сейчас это открытая демоверсия без авторизации.</p></div></div>
+</div>
+<section id="game" class="game" hidden><div class="gamebar"><button class="subtle" id="back">← Все игры</button><button class="subtle" id="restart">↻ Сначала</button></div><h2 id="game-title"></h2><p class="rules" id="rules"></p><div class="status" id="status" role="status" aria-live="polite"></div><div class="board" id="board"></div></section>
+</main>
+<footer><div class="wrap">Made for girls &amp; their chaos ♡ · fan project · персонажи принадлежат Sanrio</div></footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const theme=$('theme');
+function themeLabel(){const dark=document.documentElement.dataset.theme==='dark';theme.textContent=dark?'☀':'☾';theme.setAttribute('aria-label',dark?'Светлая тема':'Тёмная тема');document.querySelector('meta[name=theme-color]').content=dark?'#171320':'#fff3f7'}
+themeLabel();
+theme.onclick=()=>{const mode=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=mode;try{localStorage.setItem('gn-theme',mode)}catch(e){}themeLabel()};
+let kind='',state=[],turn=1,done=false,selected=-1,forced=false,winning=[];
+const titles={tic:'Крестики-нолики',connect:'Четыре в ряд',checkers:'Шашки'};
+const instructions={tic:'По очереди ставьте ♡ и ×. Три одинаковых знака по горизонтали, вертикали или диагонали — победа.',connect:'Нажмите на любой кружок в нужном столбце. Фишка упадёт вниз. Соберите четыре своих фишки в ряд.',checkers:'Упрощённые английские шашки: ход по диагонали вперёд, обязательное взятие, серия прыжков. Дамки ходят на одну клетку в обе стороны. После превращения ход заканчивается.'};
+function player(p){return kind==='tic'?(p===1?'♡ Hello Kitty':'× Kuromi'):kind==='connect'?(p===1?'♡ Hello Kitty':'☁ Cinnamoroll'):(p===1?'♡ Hello Kitty':'✦ Kuromi')}
+function message(s){$('status').textContent=s||'Ход: '+player(turn)}
+function start(k){kind=k;turn=1;done=false;selected=-1;forced=false;winning=[];state=Array(k==='tic'?9:k==='connect'?42:64).fill(0);if(k==='checkers'){for(let i=0;i<64;i++){let r=Math.floor(i/8),c=i%8;if((r+c)%2===1)state[i]=r<3?2:r>4?1:0}}$('lobby').hidden=true;$('game').hidden=false;$('game-title').textContent=titles[k];$('rules').textContent=instructions[k];message();render();window.scrollTo(0,0)}
+function home(){kind='';$('game').hidden=true;$('lobby').hidden=false;window.scrollTo(0,0)}
+document.querySelectorAll('[data-game]').forEach(b=>b.onclick=()=>start(b.dataset.game));$('back').onclick=home;$('restart').onclick=()=>start(kind);$('home-link').onclick=e=>{e.preventDefault();home()};$('games-link').onclick=()=>{if(kind)home()};
+function owner(v){return v===3?1:v===4?2:v}
+function jumps(i,captureOnly=false){let v=state[i];if(!v)return [];let r=Math.floor(i/8),c=i%8;let dirs=v>2?[-1,1]:v===1?[-1]:[1];let result=[];for(let dr of dirs)for(let dc of [-1,1]){let rr=r+dr,cc=c+dc;if(rr<0||rr>7||cc<0||cc>7)continue;let next=rr*8+cc;if(!state[next]&&!captureOnly)result.push({to:next,take:-1});else if(state[next]&&owner(state[next])!==owner(v)){let r2=rr+dr,c2=cc+dc;if(r2>=0&&r2<8&&c2>=0&&c2<8&&!state[r2*8+c2])result.push({to:r2*8+c2,take:next})}}return result}
+function mustTake(){return state.some((v,i)=>owner(v)===turn&&jumps(i,true).length)}
+function legal(i){return owner(state[i])===turn?jumps(i,forced||mustTake()):[]}
+function finish(p){done=true;message(p?'Победа: '+player(p)+'! ✧':'Ничья! ♡')}
+function checkMove(i){if(done)return;if(owner(state[i])===turn&&!forced){if(legal(i).length)selected=i;else message(mustTake()?'Нужно выбрать шашку, которая может взять соперницу.':'У этой шашки нет доступного хода.');render();return}if(selected<0)return;let move=legal(selected).find(m=>m.to===i);if(!move)return;let v=state[selected];state[selected]=0;state[i]=v;if(move.take>=0)state[move.take]=0;let crown=(v===1&&i<8)||(v===2&&i>=56);if(crown)state[i]=v+2;if(move.take>=0&&!crown&&jumps(i,true).length){selected=i;forced=true;message('Продолжи взятие той же шашкой ✦');render();return}selected=-1;forced=false;turn=3-turn;if(!state.some((x,j)=>owner(x)===turn&&jumps(j).length))finish(3-turn);else message();render()}
+function lineWin(i,w,h,n){let r=Math.floor(i/w),c=i%w,v=state[i];for(let [dr,dc] of [[0,1],[1,0],[1,1],[1,-1]]){let cells=[i];for(let s of [-1,1])for(let k=1;k<n;k++){let rr=r+dr*k*s,cc=c+dc*k*s;if(rr<0||rr>=h||cc<0||cc>=w||state[rr*w+cc]!==v)break;cells.push(rr*w+cc)}if(cells.length>=n)return cells}return []}
+function simpleMove(i){if(done)return;if(kind==='connect'){let c=i%7;let row=5;while(row>=0&&state[row*7+c])row--;if(row<0)return;i=row*7+c}else if(state[i])return;state[i]=turn;winning=lineWin(i,kind==='tic'?3:7,kind==='tic'?3:6,kind==='tic'?3:4);if(winning.length)finish(turn);else if(state.every(Boolean))finish(0);else{turn=3-turn;message()}render()}
+function render(){const board=$('board');board.className='board '+kind;let cols=kind==='tic'?3:kind==='connect'?7:8;board.style.gridTemplateColumns='repeat('+cols+',minmax(0,1fr))';board.replaceChildren();let targets=kind==='checkers'&&selected>=0?legal(selected).map(m=>m.to):[];state.forEach((v,i)=>{let b=document.createElement('button');b.className='cell';b.type='button';let r=Math.floor(i/cols),c=i%cols;b.setAttribute('aria-label','Ряд '+(r+1)+', столбец '+(c+1)+(v?', '+player(owner(v)):''));if(winning.includes(i))b.classList.add('win');if(kind==='checkers'){if((r+c)%2)b.classList.add('dark');else b.disabled=true;if(i===selected)b.classList.add('selected');if(targets.includes(i))b.classList.add('target');if(v){let p=document.createElement('span');p.className='piece p'+owner(v);p.textContent=v>2?'♛':v===1?'♡':'✦';b.append(p)}b.onclick=()=>checkMove(i)}else{if(kind==='tic'&&v){b.textContent=v===1?'♡':'×';b.classList.add(v===1?'x':'o');b.disabled=true}if(kind==='connect'&&v)b.classList.add('p'+v);b.onclick=()=>simpleMove(i)}if(done)b.disabled=true;board.append(b)})}
+</script>
+</body>
+</html>
