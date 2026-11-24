@@ -1,0 +1,1 @@
+{"name":"girls-night-private","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node --test scripts/auth.test.mjs"}}
