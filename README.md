@@ -1,15 +1,82 @@
-# Girl’s Night
+# Girl’s Night — игры с подружками
 
-Private game club — Cloudflare Workers deployment. The production URL is assigned by Cloudflare after deployment.
+Три игры с онлайн-комнатами: английские шашки, крестики-нолики и «Четыре в ряд». Светлая и тёмная темы, вход по общему паролю. Для подруг не нужны аккаунты GitHub или Cloudflare.
 
-Visitors enter a shared password in a form. No username, GitHub or ChatGPT account is needed. Password verification happens on the server before game HTML is served. Keep the repository private and GitHub Pages disabled.
+## Как играть
 
-Production secrets are managed in Cloudflare Workers (Settings > Variables and Secrets): `SITE_PASSWORD` and a random `SESSION_SECRET` (at least 32 characters). Never put real values in source or client code. To change the password, update `SITE_PASSWORD` in Cloudflare and deploy. Existing sessions are automatically invalidated by password or signing-key changes.
+1. Открой сайт и введи общий пароль.
+2. Выбери игру → «Создать онлайн-комнату».
+3. Скопируй приглашение и отправь подруге. После входа по паролю она попадёт в комнату.
+4. У каждой игрокини своё место и очередь хода. Обновление страницы восстанавливает партию.
+5. Для новой партии нажмите «Новая партия» и «Принять новую партию» на двух устройствах.
 
-Successful login sets a signed, seven-day `__Host-gn-session` cookie with Secure, HttpOnly and SameSite=Strict attributes. Login/logout require same-origin POST requests. Logout clears the current browser cookie. There is a best-effort per-IP attempt limit in each Worker instance; it is not a global distributed rate limit. Responses disable caching and search indexing. Missing secrets fail closed.
+В комнате два места. Ссылка не публикуется в общем списке. Комната и партия хранятся 24 часа с момента создания, затем удаляются. Место привязано к текущему входу в браузере: выход, очистка cookies или новый вход создают другую идентичность. Если обеим нужно начать с другими местами, создайте новую комнату. Кнопка «Все игры» закрывает соединение и сохраняет место до истечения комнаты.
 
-Build and test: `npm run build && npm test`.
+Доступен и режим «На одном устройстве».
 
-Deploy with `npx wrangler deploy` after building. The Wrangler configuration points only to `dist/server/index.js`. In Cloudflare Workers Builds, connect the repository, select `main`, set the build command to `npm run build && npm test`, and the deploy command to `npx wrangler deploy`. Set the two runtime secrets after creating the Worker; until then, the Worker refuses access. Do not configure any static assets directory. There is no public static directory: `index.html` is bundled into server code. Do not deploy HTML directly to a static host, because that bypasses password protection.
+## Размещение на Cloudflare Workers
 
-GitHub stores source. Once Cloudflare Workers Builds is connected, GitHub pushes to the production branch can automatically redeploy the site. Games currently run on one device; online multiplayer is not implemented.
+Сайт и игровой сервер работают в одном Worker. Каждую комнату обслуживает отдельный Durable Object с хранилищем SQLite. GitHub хранит исходники. Firebase и Supabase не используются.
+
+Нужен Node.js 22.12 или новее.
+
+### Через панель Cloudflare
+
+1. В **Workers & Pages** создай **Worker**, подключив репозиторий `luchiiro/girls-night-but-not-really`. Если он уже подключён, используй существующий Worker.
+2. Выбери ветку `main` после слияния изменений.
+3. Команда сборки: `npm run build && npm test`.
+4. Команда публикации: `npx wrangler deploy`.
+5. В **Settings → Variables and Secrets** создай два секрета:
+   - `SITE_PASSWORD` — общий пароль для клуба;
+   - `SESSION_SECRET` — случайная строка не короче 32 символов.
+6. Опубликуй Worker. Открывай выданный Cloudflare адрес `https://…workers.dev`.
+
+Не задавай каталог статических файлов. `index.html`, скрипты и страница входа включаются в серверную сборку. Если нужен вход по паролю, не публикуй HTML отдельно через GitHub Pages.
+
+`wrangler.jsonc` уже содержит binding `GAME_ROOMS` и миграцию `new_sqlite_classes`. Wrangler создаёт пространство комнат при первой публикации; вручную создавать базу или Durable Object не нужно. SQLite-вариант совместим с Workers Free, в пределах квот Cloudflare. Включать платный тариф для этого кода не требуется. При превышении бесплатных лимитов операции могут временно завершаться ошибкой.
+
+Если Cloudflare Workers Builds уже настроен, публикации в production-ветку могут автоматически обновлять сайт. Реальные секреты остаются в Cloudflare и не коммитятся.
+
+### Через терминал
+
+```sh
+npm ci
+npx wrangler login
+npx wrangler secret put SITE_PASSWORD
+npx wrangler secret put SESSION_SECRET
+npm run deploy
+```
+
+### Локальная проверка
+
+Создай игнорируемый файл `.dev.vars` с тестовыми `SITE_PASSWORD` и `SESSION_SECRET`, затем:
+
+```sh
+npm ci
+npm run dev
+```
+
+Для Secure cookies используй HTTPS: `npm run build && npx wrangler dev --local-protocol https`.
+
+## Проверки
+
+```sh
+npm run build
+npm test
+npx wrangler deploy --dry-run
+```
+
+Тесты проверяют пароль и cookie, правила трёх игр, закрытые API, синхронизацию двух игроков через реальные WebSockets в локальном Workers runtime, восстановление после hibernation, запрет третьего места, согласование новой партии и клиентский интерфейс в изолированных DOM. DOM-проверки не заменяют визуальную проверку в настоящем браузере.
+
+## Устройство
+
+- `index.html`, `client.js` — интерфейс и подключение к комнате с автоматическим переподключением;
+- `worker/game.js` — общие правила локальных и онлайн-игр;
+- `worker/room.js` — серверные места, очередь ходов, сохранение и WebSocket Hibernation;
+- `worker/index.js` — защищённая выдача сайта, API и проверка Origin;
+- `scripts/build.mjs` — серверная сборка без публичной папки assets.
+
+Клиент передаёт только ход и версию партии, а не новое поле. Сервер проверяет место, очередь и допустимость хода. Одновременные и устаревшие команды не перезаписывают состояние. Новую партию нужно подтвердить обеим игрокиням.
+
+Успешный вход выдаёт подписанную семидневную cookie `__Host-gn-session` с Secure, HttpOnly и SameSite=Strict. Пароль и ключ не попадают в HTML. Изменение пароля или ключа отзывает cookie; сообщения и рассылки открытых соединений также проверяют срок входа и текущие секреты. Выход очищает cookie в текущем браузере. Существующий лимит попыток входа — best-effort на Worker instance, а не глобальный распределённый лимит. Отсутствие секретов закрывает доступ. Ответы запрещают кеширование и поисковую индексацию.
+

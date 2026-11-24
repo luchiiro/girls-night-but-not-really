@@ -1,1 +1,19 @@
-{"name":"girls-night-private","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node --test scripts/auth.test.mjs"}}
+{
+  "name": "girls-night-private",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && npm test && wrangler deploy"
+  },
+  "devDependencies": {
+    "happy-dom": "20.8.4",
+    "miniflare": "5.20261123.1-beta",
+    "wrangler": "4.168.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
