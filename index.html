@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<meta name="theme-color" content="#fff3f7">
+<meta name="theme-color" content="#f9e6e5">
 <title>Girl’s Night But Not Really ♡</title>
 <script>try{document.documentElement.dataset.theme=localStorage.getItem('gn-theme')||'light'}catch(e){}</script>
 <style>
@@ -88,48 +88,39 @@ footer{border-top:1px solid var(--line);padding:21px 0;color:var(--muted);font-s
 .win{outline:3px solid var(--pink);outline-offset:-3px}
 @media(max-width:720px){.wrap{padding:0 15px}.top{height:65px}.brand{font-size:12px}.brand small{font-size:9px}.logo{width:36px;height:36px}.navlink{display:none}.pill{font-size:11px;padding:8px 10px}main{padding-top:18px!important}.hero{grid-template-columns:1fr;padding:27px 23px 13px;border-radius:27px}.hero p{font-size:14px}.art{max-width:390px;margin:8px auto 0;display:block}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{padding:9px;border-radius:18px}.cover{height:108px;border-radius:13px}.cover svg{width:104px;height:90px}.cardbody{padding:10px 3px 3px}.card h3{font-size:15px}.card p{font-size:12px}.cardfoot{gap:4px}.tag{font-size:10px}.play{font-size:12px;padding:7px 9px}.section-head h2{font-size:23px}.section-head p{font-size:11px}.strip{margin-bottom:24px}.game{padding:15px}.note{padding:15px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Original rose salon / midnight salon theme. No external assets. */
+:root{--bg:#f9e6e5;--surface:#fff8ef;--soft:#f7dce0;--ink:#492332;--muted:#785260;--line:#d7a6a6;--pink:#a32b4c;--accent:#c94e70;--purple:#eed0cf;--blue:#e8c0c7;--hero:#f9e3e2;--shadow:0 8px 28px #65273b19;--board-light:#fce9d7;--board-dark:#a65c70;--focus:#9b264b;--gold:#ad7844;--velvet:#d95678;--ornament:#8b2646;--button-ink:#fff9ee}
+[data-theme=dark]{--bg:#160e17;--surface:#251521;--soft:#40202f;--ink:#fae8df;--muted:#d7b3bc;--line:#69414f;--pink:#f5a0b5;--accent:#dd5879;--purple:#3e1c2d;--blue:#4c2032;--hero:#341523;--shadow:0 8px 28px #0006;--board-light:#e8bcae;--board-dark:#693044;--focus:#ffd3bd;--gold:#e2bd82;--velvet:#411c2d;--ornament:#c2677e;--button-ink:#351320}
+body{background-color:var(--bg);background-image:radial-gradient(ellipse at 50% 0%,var(--soft),transparent 65%),repeating-linear-gradient(45deg,transparent 0 29px,color-mix(in srgb,var(--line) 20%,transparent) 29px 30px),repeating-linear-gradient(-45deg,transparent 0 29px,color-mix(in srgb,var(--line) 20%,transparent) 29px 30px);font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+header{background:var(--surface);border-bottom:3px double var(--gold)}
+.top{height:76px}.brand{font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:700}.brand small{font-family:system-ui,sans-serif;font-size:9px;letter-spacing:2.1px}.logo{background:var(--velvet);border:3px double var(--gold);border-radius:50% 50% 44% 44%;color:#fff5e2;box-shadow:none}
+.pill,.theme,.subtle{border-radius:7px;border-color:var(--gold);background:var(--surface)}.pill{color:var(--muted)}.theme{font-size:19px;line-height:1.1}
+.hero{border:3px double var(--gold);border-radius:27px 27px 12px 12px;background:linear-gradient(110deg,var(--surface) 0%,var(--hero) 55%,var(--soft));padding:40px 35px;min-height:340px}
+.hero:before{content:"";position:absolute;inset:8px;border:1px solid var(--line);border-radius:18px 18px 7px 7px;pointer-events:none;z-index:-1}
+.hero:after{content:"";inset:0;transform:none;background:repeating-conic-gradient(from 45deg,var(--ornament) 0% 25%,transparent 0% 50%) center/40px 40px;opacity:.035}
+h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.055em;font-size:clamp(41px,5.8vw,72px);line-height:1.04}h1 em{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;font-size:.73em;letter-spacing:-.05em}
+.eyebrow{font-size:10px;letter-spacing:2px}.dot{background:var(--gold)}
+.primary{background:var(--pink);color:var(--button-ink);border:3px double var(--button-ink);border-radius:6px 14px 6px 14px;padding:12px 23px;box-shadow:0 4px 0 var(--line)}
+.art{filter:drop-shadow(0 8px 7px #42142c26)}.art .float{animation:none}
+.strip{justify-content:center;gap:8px;margin:18px 0 32px}.strip span{border:1px solid var(--line);border-radius:5px;background:var(--surface);padding:7px 14px;letter-spacing:.25px}
+.section-head{border-bottom:3px double var(--gold);padding-bottom:13px}.section-head h2,.game h2{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:32px;letter-spacing:-.6px}
+.card{border:3px double var(--line);border-radius:13px 13px 6px 6px;padding:10px;background:var(--surface)}.card:not(.soon):hover{border-color:var(--gold)}
+.cover{height:147px;border:3px double #e8bd8c;border-radius:8px;isolation:isolate;background-color:#a93b5d!important;background-image:radial-gradient(ellipse at center,#f1bdc459,transparent 72%),repeating-conic-gradient(from 45deg,#2b112b24 0% 25%,transparent 0% 50%);background-size:auto,38px 38px}
+.cover.purple,.cover.lilac{background-color:#76415a!important}.cover.blue,.cover.mint{background-color:#733849!important}.cover.peach{background-color:#b05e65!important}
+[data-theme=dark] .cover{filter:none;background-color:#592336!important}[data-theme=dark] .cover.purple,[data-theme=dark] .cover.lilac{background-color:#422637!important}[data-theme=dark] .cover.blue,[data-theme=dark] .cover.mint{background-color:#43202d!important}
+.cover:before,.cover:after{color:#f5d9a8;font-size:28px}.cover:after{content:"♢"}.cover svg{filter:drop-shadow(0 5px 3px #2e102c55)}
+.card h3{font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:600}.card p{line-height:1.5}.play{border:1px solid var(--line);border-radius:5px 10px;background:var(--soft);color:var(--pink);min-height:37px}.soon .play{opacity:1}
+.note{border:3px double var(--gold);border-radius:6px 16px;background:var(--surface)}.note-icon{color:var(--pink)}footer{border-top:3px double var(--gold)}
+.game{border:3px double var(--gold);border-radius:16px}.status{border:1px solid var(--line);border-radius:6px}.piece.p1{background:#fff0df;color:#9e294c}.piece.p2{background:#532639;color:#f7d6a9}.cell.o{color:var(--ink)}.connect .cell.p1{background:#f39db0}.connect .cell.p2{background:#d1a05e}
+@media(max-width:720px){.top{height:65px}.brand{font-size:16px}.brand small{font-size:8px;letter-spacing:1px}.hero{padding:29px 21px 17px;min-height:0}.hero h1{font-size:clamp(38px,10vw,58px)}.art{max-width:340px}.strip{justify-content:flex-start;margin-bottom:25px}.strip span{font-size:10px;padding:5px 8px}.section-head h2{font-size:26px}.cover{height:110px}.card h3{font-size:17px}.cardfoot{flex-wrap:wrap}.card{padding:7px}.game{padding:15px}.pill{display:none}}
+@media(max-width:340px){.grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
-<!-- Original simplified vector fan art, not official Sanrio assets. -->
 <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
 <defs>
-<symbol id="kitty" viewBox="0 0 180 180">
-<g stroke="#594457" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-<ellipse cx="89" cy="154" rx="49" ry="12" fill="#bc80a0" opacity=".18" stroke="none"/>
-<path d="M65 114 Q53 120 48 146 Q66 155 85 148 L91 139 L99 149 Q119 155 135 145 Q127 120 113 114Z" fill="#f4a9c9"/>
-<ellipse cx="68" cy="147" rx="15" ry="9" fill="#fffafc"/><ellipse cx="112" cy="147" rx="15" ry="9" fill="#fffafc"/>
-<path d="M35 74 Q24 46 34 28 Q48 25 69 43 Q91 37 114 43 Q137 25 147 30 Q157 45 146 73 Q163 91 153 111 Q142 134 91 134 Q40 134 26 111 Q18 94 35 74Z" fill="#fffdfd"/>
-<path d="M119 44 Q99 26 102 49 Q102 62 122 53 Q140 69 151 56 Q158 45 151 33 Q137 28 127 45Z" fill="#ee668d"/><circle cx="126" cy="49" r="8" fill="#ff97b2"/>
-<g stroke-width="3"><path d="M24 85 L10 80 M25 97 L8 98 M28 107 L15 114 M153 85 L167 80 M154 97 L171 98 M151 107 L164 114" fill="none"/></g>
-<ellipse cx="64" cy="93" rx="4.6" ry="7" fill="#594457" stroke="none"/><ellipse cx="116" cy="93" rx="4.6" ry="7" fill="#594457" stroke="none"/><ellipse cx="90" cy="105" rx="7" ry="4.5" fill="#f9d879" stroke-width="1.7"/>
-<ellipse cx="48" cy="106" rx="8" ry="4" fill="#f8c4d7" stroke="none"/><ellipse cx="132" cy="106" rx="8" ry="4" fill="#f8c4d7" stroke="none"/>
-</g></symbol>
-<symbol id="kuromi" viewBox="0 0 180 180">
-<g stroke="#594457" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round">
-<ellipse cx="91" cy="155" rx="49" ry="11" fill="#bc80a0" opacity=".18" stroke="none"/>
-<path d="M65 116 Q48 133 56 148 L87 151 L92 140 L100 151 L128 148 Q133 130 115 116Z" fill="#66516f"/>
-<ellipse cx="70" cy="149" rx="14" ry="8" fill="#fffafd"/><ellipse cx="113" cy="149" rx="14" ry="8" fill="#fffafd"/>
-<path d="M34 78 Q24 42 19 19 Q48 24 73 52 Q90 44 108 52 Q137 24 161 18 Q158 49 147 78 Q166 103 149 123 Q132 140 90 140 Q46 140 30 123 Q13 102 34 78Z" fill="#574460"/>
-<circle cx="19" cy="19" r="8" fill="#f4a7c7"/><circle cx="161" cy="18" r="8" fill="#f4a7c7"/>
-<path d="M40 103 Q44 79 68 79 Q82 79 90 90 Q100 78 117 79 Q140 80 143 103 Q148 130 91 132 Q35 130 40 103Z" fill="#fffafd"/>
-<path d="M76 65 Q76 53 90 53 Q104 53 104 65 Q104 72 98 73 L98 78 L82 78 L82 73 Q76 72 76 65Z" fill="#f89cc3" stroke="none"/>
-<g fill="#574460" stroke="none"><circle cx="85" cy="65" r="3"/><circle cx="95" cy="65" r="3"/><ellipse cx="65" cy="105" rx="5" ry="7"/><ellipse cx="116" cy="105" rx="5" ry="7"/><ellipse cx="90" cy="111" rx="4" ry="3"/></g>
-<path d="M85 119 Q90 124 95 119" fill="none" stroke-width="2"/>
-<ellipse cx="52" cy="118" rx="7" ry="4" fill="#f8c4d7" stroke="none"/><ellipse cx="129" cy="118" rx="7" ry="4" fill="#f8c4d7" stroke="none"/>
-</g></symbol>
-<symbol id="cinna" viewBox="0 0 200 180">
-<g stroke="#647991" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
-<ellipse cx="100" cy="156" rx="54" ry="10" fill="#8cabc3" opacity=".2" stroke="none"/>
-<path d="M121 129 Q151 115 150 136 Q147 151 126 145" fill="#fffdfd"/>
-<path d="M75 115 Q57 129 65 148 Q78 161 103 151 Q127 162 138 147 Q141 128 121 115Z" fill="#fffdfd"/>
-<path d="M56 64 Q21 58 7 93 Q-1 122 18 124 Q40 127 61 103 M144 64 Q180 58 193 93 Q201 122 182 124 Q160 127 139 103" fill="#fffdfd"/>
-<path d="M46 77 Q52 43 99 43 Q147 43 154 77 Q166 113 138 130 Q100 145 62 130 Q34 113 46 77Z" fill="#fffdfd"/>
-<ellipse cx="74" cy="103" rx="5.5" ry="7" fill="#719bc0" stroke="none"/><ellipse cx="126" cy="103" rx="5.5" ry="7" fill="#719bc0" stroke="none"/>
-<path d="M91 113 Q96 120 100 113 Q105 120 110 113" fill="none" stroke="#719bc0" stroke-width="2.8"/>
-<ellipse cx="60" cy="115" rx="10" ry="5" fill="#f8bfd5" stroke="none"/><ellipse cx="140" cy="115" rx="10" ry="5" fill="#f8bfd5" stroke="none"/>
-<path d="M89 135 Q72 123 74 141 Q76 151 93 143 L105 143 Q122 151 125 141 Q127 123 111 135Z" fill="#a8d8f6" stroke-width="2"/><circle cx="100" cy="139" r="6" fill="#ceeaff" stroke-width="2"/>
-</g></symbol>
 <symbol id="ico-check" viewBox="0 0 128 110"><g transform="rotate(-10 64 55)"><rect x="22" y="12" width="84" height="84" rx="9" fill="#fff5f9" stroke="#a7658e" stroke-width="3"/><g fill="#ca91b8"><path d="M25 15h19v19H25zm40 0h20v19H65zM45 35h20v20H45zm40 0h18v20H85zM25 55h20v20H25zm40 0h20v20H65zM45 75h20v18H45zm40 0h18v18H85z"/></g><g stroke="#fff8" stroke-width="2"><circle cx="35" cy="25" r="8" fill="#654674"/><circle cx="55" cy="45" r="8" fill="#654674"/><circle cx="75" cy="65" r="8" fill="#ee8fb0"/><circle cx="95" cy="85" r="8" fill="#ee8fb0"/></g></g></symbol>
 <symbol id="ico-tic" viewBox="0 0 128 110"><rect x="23" y="12" width="82" height="86" rx="19" fill="#fff8ff" transform="rotate(8 64 55)"/><g stroke="#baa1db" stroke-width="3.5" stroke-linecap="round"><path d="M51 23v65m26-65v65M32 42h65M32 68h65"/></g><g stroke="#d16f9f" stroke-width="5" stroke-linecap="round"><path d="M36 27l10 10m0-10L36 37M59 50l11 11m0-11L59 61M83 76l11 10m0-10L83 86"/></g><g fill="none" stroke="#8ca8de" stroke-width="4"><circle cx="89" cy="32" r="7"/><circle cx="41" cy="79" r="7"/></g></symbol>
 <symbol id="ico-four" viewBox="0 0 128 110"><rect x="16" y="17" width="96" height="76" rx="13" fill="#80a9d4" stroke="#6485b1" stroke-width="2"/><g fill="#eaf6ff"><circle cx="31" cy="31" r="9"/><circle cx="53" cy="31" r="9"/><circle cx="75" cy="31" r="9"/><circle cx="97" cy="31" r="9"/><circle cx="31" cy="55" r="9"/><circle cx="97" cy="55" r="9"/></g><g fill="#ee9cba"><circle cx="53" cy="55" r="9"/><circle cx="31" cy="79" r="9"/><circle cx="75" cy="79" r="9"/></g><g fill="#ffe4a1"><circle cx="75" cy="55" r="9"/><circle cx="53" cy="79" r="9"/><circle cx="97" cy="79" r="9"/></g></symbol>
@@ -137,22 +128,55 @@ footer{border-top:1px solid var(--line);padding:21px 0;color:var(--muted);font-s
 <symbol id="ico-cards" viewBox="0 0 128 110"><rect x="29" y="18" width="49" height="73" rx="10" fill="#a58bc9" stroke="#765c9a" stroke-width="2" transform="rotate(-20 53 55)"/><rect x="51" y="18" width="49" height="73" rx="10" fill="#fff9ff" stroke="#b99ad6" stroke-width="2" transform="rotate(13 75 55)"/><path d="M74 66C40 40 69 31 77 48C94 34 110 57 74 66Z" fill="#e68bb6"/></symbol>
 <symbol id="ico-chat" viewBox="0 0 128 110"><path d="M12 27q0-10 12-10h59q12 0 12 12v30q0 12-12 12H46L24 86V71q-12 0-12-12Z" fill="#fffaf7" stroke="#8bb5a0" stroke-width="3"/><path d="M47 47q0-10 10-10h49q10 0 10 10v30q0 10-10 10h-4v13L84 87H57q-10 0-10-10Z" fill="#a6d3bb" stroke="#72a98d" stroke-width="3"/><g fill="#fff"><circle cx="66" cy="62" r="4"/><circle cx="82" cy="62" r="4"/><circle cx="98" cy="62" r="4"/></g></symbol>
 </defs></svg>
-<header><div class="wrap top"><a class="brand" href="#" id="home-link"><span class="logo">♡</span><span>Girl’s Night<small>but not really</small></span></a><nav class="nav" aria-label="Навигация"><form action="/logout" method="post"><button class="subtle" type="submit">Выйти</button></form><a href="#games" class="navlink" id="games-link">Игры</a><span class="pill">✦ Альфа 0.1</span><button class="theme" id="theme" aria-label="Переключить тему" title="Переключить тему">☾</button></nav></div></header>
+<header><div class="wrap top"><a class="brand" href="#" id="home-link"><span class="logo">♡</span><span>Girl’s Night<small>but not really</small></span></a><nav class="nav" aria-label="Навигация"><form action="/logout" method="post"><button class="subtle" type="submit">Выйти</button></form><a href="#games" class="navlink" id="games-link">Игры</a><span class="pill">✦ Альфа 0.2</span><button class="theme" id="theme" aria-label="Переключить тему" title="Переключить тему">☾</button></nav></div></header>
 <main class="wrap">
 <div id="lobby">
 <section class="hero">
-<div><span class="eyebrow"><span class="dot"></span> your little game club</span><h1>Girl’s Night<em>but not really.</em></h1><p>Маленький уголок интернета для больших побед, милых соперниц и вечеров, которые случайно заканчиваются утром.</p><a href="#games" class="primary">Выбрать игру <span aria-hidden="true">↗</span></a></div>
-<svg class="art" viewBox="0 0 470 270" role="img" aria-label="Hello Kitty, Kuromi и Cinnamoroll">
-<ellipse cx="234" cy="233" rx="201" ry="22" fill="#a16caa" opacity=".11"/>
-<g fill="#fff" opacity=".9"><path d="M28 62l4 14 14 4-14 4-4 14-4-14-14-4 14-4zm373-28 4 11 11 4-11 4-4 11-4-11-11-4 11-4zM238 19l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/><circle cx="110" cy="37" r="4"/><circle cx="443" cy="132" r="4"/><circle cx="37" cy="175" r="3"/></g>
-<path d="M340 27c-16-18-34 4 0 24 34-20 16-42 0-24z" fill="#efa5c9" opacity=".75"/>
-<g class="float"><use href="#kitty" x="6" y="69" width="165" height="165"/></g>
-<g class="float"><use href="#kuromi" x="144" y="30" width="182" height="182"/></g>
-<g class="float"><use href="#cinna" x="292" y="80" width="174" height="157"/></g>
-<g font-size="10" font-weight="800" fill="#916585" text-anchor="middle"><text x="86" y="251">HELLO KITTY</text><text x="235" y="224">KUROMI</text><text x="381" y="251">CINNAMOROLL</text></g></svg>
+<div><span class="eyebrow"><span class="dot"></span> private club · rose & midnight</span><h1>Girl’s Night<em>but not really.</em></h1><p>Маленький уголок интернета для больших побед, милых соперниц и вечеров, которые случайно заканчиваются утром.</p><a href="#games" class="primary">Выбрать игру <span aria-hidden="true">↗</span></a></div>
+<svg class="art" viewBox="0 0 470 320" role="img" aria-label="Чайная чашка, карты, ленты и золотой ключ">
+<defs>
+ <pattern id="gn-diamonds" width="32" height="48" patternUnits="userSpaceOnUse"><path d="M16 0 32 24 16 48 0 24Z" fill="var(--ornament)" opacity=".19"/></pattern>
+ <linearGradient id="gn-porcelain" x2=".9" y2="1"><stop stop-color="#fffaf1"/><stop offset="1" stop-color="#f2b9bf"/></linearGradient>
+ <linearGradient id="gn-gold" x2="1" y2="1"><stop stop-color="#fff0bb"/><stop offset=".5" stop-color="#bc8b52"/><stop offset="1" stop-color="#f8dfaa"/></linearGradient>
+</defs>
+<g fill="none" stroke="var(--gold)" stroke-width="1.5">
+ <path d="M84 38H386Q386 53 403 53V264Q386 264 386 281H84Q84 264 67 264V53Q84 53 84 38Z" fill="var(--velvet)"/>
+ <path d="M95 46H375L395 65V253L375 273H95L75 253V65Z" fill="url(#gn-diamonds)"/>
+ <path d="M106 56H364L385 77V242L364 263H106L85 242V77Z" opacity=".5"/>
+ <path d="M39 160h44m304 0h44M235 22v34m0 207v31"/>
+ <path d="M85 38Q53 6 48 38T85 38M386 38Q418 6 423 38T386 38M85 281Q53 313 48 281T85 281M386 281Q418 313 423 281T386 281"/>
+</g>
+<g transform="translate(99 91) rotate(-18 55 78)" stroke="#b98966" stroke-width="2">
+ <rect width="104" height="146" rx="9" fill="#fff4de"/><rect x="7" y="7" width="90" height="132" rx="5" fill="none"/>
+ <text x="14" y="25" fill="#a32144" stroke="none" font-family="Georgia,serif" font-size="19">A</text><text x="76" y="130" fill="#a32144" stroke="none" font-family="Georgia,serif" font-size="19">A</text>
+ <path d="M52 51C31 25 6 65 52 99 98 65 73 25 52 51Z" fill="#b82d52" stroke="none"/>
+</g>
+<g transform="translate(267 75) rotate(17 55 78)" stroke="#c99a62" stroke-width="2">
+ <rect width="104" height="146" rx="9" fill="#301b29"/><rect x="7" y="7" width="90" height="132" rx="5" fill="url(#gn-diamonds)"/>
+ <text x="13" y="26" fill="#ffe4b5" stroke="none" font-family="Georgia,serif" font-size="19">Q</text><text x="77" y="130" fill="#ffe4b5" stroke="none" font-family="Georgia,serif" font-size="19">Q</text>
+ <path d="M52 42C42 57 22 69 24 82 25 95 44 97 50 83L42 106H62L54 83C60 97 79 95 80 82 82 69 62 57 52 42Z" fill="#f2d4a5" stroke="none"/>
+</g>
+<g transform="translate(159 134)" stroke="#b98966" stroke-width="2.5" stroke-linejoin="round">
+ <ellipse cx="78" cy="113" rx="94" ry="13" fill="#2b1425" opacity=".25" stroke="none"/>
+ <ellipse cx="76" cy="104" rx="87" ry="16" fill="url(#gn-porcelain)"/><ellipse cx="76" cy="104" rx="65" ry="9" fill="none"/>
+ <path d="M135 31C183 10 185 76 137 75L135 61C165 65 169 35 142 43Z" fill="url(#gn-porcelain)"/>
+ <path d="M6 28H145C145 74 124 97 76 97S9 75 6 28Z" fill="url(#gn-porcelain)"/>
+ <ellipse cx="76" cy="28" rx="70" ry="16" fill="#fff3dc"/><ellipse cx="76" cy="29" rx="60" ry="10" fill="#a75d48"/>
+ <path d="M21 55Q76 70 131 55M36 81Q76 94 117 81" fill="none" stroke="#c99a62"/>
+ <path d="M76 58C63 44 50 61 76 77 102 61 89 44 76 58Z" fill="#c83c5d" stroke="none"/>
+ <path d="M42 52C35 45 29 55 42 63 55 55 49 45 42 52ZM110 52C103 45 97 55 110 63 123 55 117 45 110 52Z" fill="#dc7e91" stroke="none"/>
+</g>
+<g class="float" transform="translate(202 39)" stroke="#892c48" stroke-width="2" stroke-linejoin="round">
+ <path d="M32 22Q2 -2 0 14Q-5 32 27 31L10 61 29 52 39 35 50 61 63 52 43 31Q75 32 70 14Q68 -2 38 22Z" fill="#d95978"/><rect x="28" y="18" width="15" height="16" rx="5" fill="#f9bdc6"/><path d="m9 14 19 9m34-9-19 9" fill="none"/>
+</g>
+<g transform="translate(325 234) rotate(-22)" fill="none" stroke="url(#gn-gold)" stroke-width="6" stroke-linecap="round">
+ <path d="M0 0C-23-25-41 5 0 26 41 5 23-25 0 0ZM0 26V72m0-8h13m-13 7h9"/>
+</g>
+<g fill="var(--gold)"><path d="M48 89l4 11 11 4-11 4-4 11-4-11-11-4 11-4ZM413 107l3 9 9 3-9 3-3 9-3-9-9-3 9-3ZM132 256l3 8 8 3-8 3-3 8-3-8-8-3 8-3Z"/><circle cx="432" cy="195" r="3"/><circle cx="35" cy="215" r="3"/></g>
+</svg>
 </section>
-<div class="strip"><span>♡ made for friends</span><span>✦ 3 игры доступны</span><span>☁ уютно и без спешки</span></div>
-<section id="games"><div class="section-head"><div><span class="eyebrow">01 / game shelf</span><h2>Во что играем?</h2></div><p>Пока на одном устройстве</p></div>
+<div class="strip"><span>♡ закрытый клуб</span><span>✦ 3 игры доступны</span><span>♢ уютно и без спешки</span></div>
+<section id="games"><div class="section-head"><div><span class="eyebrow">01 / ИГРОВОЙ САЛОН</span><h2>Во что играем?</h2></div><p>Пока на одном устройстве</p></div>
 <div class="grid">
 <article class="card"><div class="cover pink"><svg aria-hidden="true"><use href="#ico-check"/></svg></div><div class="cardbody"><h3>Шашки</h3><p>Хитрые ходы и сладкая месть.</p><div class="cardfoot"><span class="tag">♙ 2 игрока</span><button class="play" data-game="checkers">Играть ↗</button></div></div></article>
 <article class="card"><div class="cover purple"><svg aria-hidden="true"><use href="#ico-tic"/></svg></div><div class="cardbody"><h3>Крестики-нолики</h3><p>Маленькая битва за три в ряд.</p><div class="cardfoot"><span class="tag">♙ 2 игрока</span><button class="play" data-game="tic">Играть ↗</button></div></div></article>
@@ -165,18 +189,18 @@ footer{border-top:1px solid var(--line);padding:21px 0;color:var(--muted);font-s
 </div>
 <section id="game" class="game" hidden><div class="gamebar"><button class="subtle" id="back">← Все игры</button><button class="subtle" id="restart">↻ Сначала</button></div><h2 id="game-title"></h2><p class="rules" id="rules"></p><div class="status" id="status" role="status" aria-live="polite"></div><div class="board" id="board"></div></section>
 </main>
-<footer><div class="wrap">Made for girls &amp; their chaos ♡ · fan project · персонажи принадлежат Sanrio</div></footer>
+<footer><div class="wrap">Made for girls &amp; their chaos ♡ · private game club</div></footer>
 <script>
 'use strict';
 const $=id=>document.getElementById(id);
 const theme=$('theme');
-function themeLabel(){const dark=document.documentElement.dataset.theme==='dark';theme.textContent=dark?'☀':'☾';theme.setAttribute('aria-label',dark?'Светлая тема':'Тёмная тема');document.querySelector('meta[name=theme-color]').content=dark?'#171320':'#fff3f7'}
+function themeLabel(){const dark=document.documentElement.dataset.theme==='dark';theme.textContent=dark?'☀':'☾';theme.setAttribute('aria-label',dark?'Светлая тема':'Тёмная тема');document.querySelector('meta[name=theme-color]').content=dark?'#160e17':'#f9e6e5'}
 themeLabel();
 theme.onclick=()=>{const mode=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=mode;try{localStorage.setItem('gn-theme',mode)}catch(e){}themeLabel()};
 let kind='',state=[],turn=1,done=false,selected=-1,forced=false,winning=[];
 const titles={tic:'Крестики-нолики',connect:'Четыре в ряд',checkers:'Шашки'};
 const instructions={tic:'По очереди ставьте ♡ и ×. Три одинаковых знака по горизонтали, вертикали или диагонали — победа.',connect:'Нажмите на любой кружок в нужном столбце. Фишка упадёт вниз. Соберите четыре своих фишки в ряд.',checkers:'Упрощённые английские шашки: ход по диагонали вперёд, обязательное взятие, серия прыжков. Дамки ходят на одну клетку в обе стороны. После превращения ход заканчивается.'};
-function player(p){return kind==='tic'?(p===1?'♡ Hello Kitty':'× Kuromi'):kind==='connect'?(p===1?'♡ Hello Kitty':'☁ Cinnamoroll'):(p===1?'♡ Hello Kitty':'✦ Kuromi')}
+function player(p){return p===1?'♡ Роза':kind==='tic'?'× Полночь':'✦ Полночь'}
 function message(s){$('status').textContent=s||'Ход: '+player(turn)}
 function start(k){kind=k;turn=1;done=false;selected=-1;forced=false;winning=[];state=Array(k==='tic'?9:k==='connect'?42:64).fill(0);if(k==='checkers'){for(let i=0;i<64;i++){let r=Math.floor(i/8),c=i%8;if((r+c)%2===1)state[i]=r<3?2:r>4?1:0}}$('lobby').hidden=true;$('game').hidden=false;$('game-title').textContent=titles[k];$('rules').textContent=instructions[k];message();render();window.scrollTo(0,0)}
 function home(){kind='';$('game').hidden=true;$('lobby').hidden=false;window.scrollTo(0,0)}
